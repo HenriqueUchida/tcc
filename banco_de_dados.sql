@@ -35,3 +35,16 @@ CREATE TABLE sessoes_compra (
         FOREIGN KEY (id_morador)
         REFERENCES usuario(id_morador)
 );
+
+create table evento (
+    id_event serial PRIMARY KEY,
+    tipo VARCHAR(100),
+    produto VARCHAR(100),
+    quantidade int,
+    mao_id int,
+    produto_id int,
+    pontos_mao VARCHAR(100),
+    metodo VARCHAR(100),
+    interpretacao VARCHAR(100),
+    data_inc TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)
